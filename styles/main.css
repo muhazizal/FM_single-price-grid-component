@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css?family=Karla:400,700&display=swap");
+:root {
+  font-family: 'Karla', sans-serif;
+  font-size: 62.5%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  font-size: 1.6rem;
+}
+
+.header {
+  margin: 3rem;
+}
+
+.header__title {
+  margin: 2rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #2ab2af;
+}
+
+.header__time {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #c0df34;
+}
+
+.header__description {
+  margin: 0 2rem 3rem 0;
+  line-height: 1.8;
+  color: #98a6bd;
+}
+
+.pricing {
+  grid-area: pricing;
+  padding: 2rem 3rem;
+  background-color: #2ab2af;
+}
+
+.pricing__header {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.pricing .cost {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.pricing .cost--money {
+  margin-right: 1rem;
+  color: white;
+  font-size: 3.2rem;
+  font-weight: 700;
+}
+
+.pricing .cost__time {
+  color: #e5eff5;
+  font-weight: 400;
+  margin: auto 0;
+}
+
+.pricing__access {
+  color: white;
+  margin-bottom: 4.5rem;
+}
+
+.pricing__btn {
+  width: 100%;
+  padding: 1.5rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: white;
+  background-color: #c0df34;
+  border: 0;
+  border-radius: 0.5rem;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 3rem;
+  background-color: #2dbebc;
+}
+
+.footer__header {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer__list {
+  color: #e5eff5;
+}
+
+@media (min-width: 768px) {
+  .header {
+    margin: 5rem;
+  }
+  main {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: 'pricing footer';
+  }
+  main .pricing,
+  main .footer {
+    padding: 5rem;
+  }
+}
+/*# sourceMappingURL=main.css.map */
