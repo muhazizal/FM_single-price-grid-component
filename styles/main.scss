@@ -38,107 +38,116 @@ $neutral-colors: (
 body {
 	line-height: 1.5;
 	font-size: 1.6rem;
-}
+	padding: 5rem;
+	background-color: neutral-colors('light-gray');
 
-.header {
-	margin: 3rem;
+	.header {
+		padding: 3rem;
+		background: white;
+		border-top-right-radius: 0.5rem;
+		border-top-left-radius: 0.5rem;
 
-	&__title {
-		margin: 2rem 0;
-		font-size: 2.4rem;
-		font-weight: 700;
-		color: primary-colors('cyan');
-	}
-
-	&__time {
-		margin-bottom: 1rem;
-		font-size: 1.8rem;
-		font-weight: 700;
-		color: primary-colors('bright-yellow');
-	}
-
-	&__description {
-		margin: 0 2rem 3rem 0;
-		line-height: 1.8;
-		color: neutral-colors('grayish-blue');
-	}
-}
-
-.pricing {
-	grid-area: pricing;
-	padding: 2rem 3rem;
-	background-color: primary-colors('cyan');
-
-	&__header {
-		margin-bottom: 1.5rem;
-		color: white;
-		font-size: 2rem;
-		font-weight: 400;
-	}
-
-	.cost {
-		display: inline-flex;
-
-		&--money {
-			margin-right: 1rem;
-			color: white;
-			font-size: 3.2rem;
+		&__title {
+			margin: 2rem 0;
+			font-size: 2.4rem;
 			font-weight: 700;
+			color: primary-colors('cyan');
 		}
 
 		&__time {
-			color: neutral-colors('light-gray');
+			margin-bottom: 1rem;
+			font-size: 1.8rem;
+			font-weight: 700;
+			color: primary-colors('bright-yellow');
+		}
+
+		&__description {
+			margin: 0 2rem 3rem 0;
+			line-height: 1.8;
+			color: neutral-colors('grayish-blue');
+		}
+	}
+
+	.pricing {
+		grid-area: pricing;
+		padding: 2rem 3rem;
+		background-color: primary-colors('cyan');
+
+		&__header {
+			margin-bottom: 1.5rem;
+			color: white;
+			font-size: 2rem;
 			font-weight: 400;
-			margin: auto 0;
+		}
+
+		.cost {
+			display: inline-flex;
+
+			&--money {
+				margin-right: 1rem;
+				color: white;
+				font-size: 3.2rem;
+				font-weight: 700;
+			}
+
+			&__time {
+				color: neutral-colors('light-gray');
+				font-weight: 400;
+				margin: auto 0;
+			}
+		}
+
+		&__access {
+			color: white;
+			margin-bottom: 4.5rem;
+		}
+
+		&__btn {
+			width: 100%;
+			padding: 1.5rem;
+			font-family: 'Karla', sans-serif;
+			font-weight: 700;
+			font-size: 1.6rem;
+			color: white;
+			background-color: primary-colors('bright-yellow');
+			border: 0;
+			border-radius: 0.5rem;
+
+			&:hover {
+				cursor: pointer;
+				background-color: primary-colors('btn-hover');
+			}
 		}
 	}
 
-	&__access {
-		color: white;
-		margin-bottom: 4.5rem;
-	}
+	.footer {
+		grid-area: footer;
+		padding: 3rem;
+		background-color: primary-colors('light-cyan');
+		border-bottom-right-radius: 0.5rem;
+		border-bottom-left-radius: 0.5rem;
 
-	&__btn {
-		width: 100%;
-		padding: 1.5rem;
-		font-family: 'Karla', sans-serif;
-		font-weight: 700;
-		font-size: 1.6rem;
-		color: white;
-		background-color: primary-colors('bright-yellow');
-		border: 0;
-		border-radius: 0.5rem;
-
-		&:hover {
-			cursor: pointer;
-			background-color: primary-colors('btn-hover');
+		&__header {
+			color: white;
+			font-size: 2rem;
+			margin-bottom: 2rem;
 		}
-	}
-}
 
-.footer {
-	grid-area: footer;
-	padding: 3rem;
-	background-color: primary-colors('light-cyan');
-
-	&__header {
-		color: white;
-		font-size: 2rem;
-		margin-bottom: 2rem;
-	}
-
-	&__list {
-		color: neutral-colors('light-gray');
+		&__list {
+			color: neutral-colors('light-gray');
+		}
 	}
 }
 
 @include media('>=tablet') {
-	.header {
-		margin: 10rem 5rem;
-
-		&__description {
-			width: 50%;
+	@include media('>=desktop') {
+		body {
+			padding: 15rem 25rem;
 		}
+	}
+
+	.header {
+		padding: 5rem;
 	}
 
 	main {
@@ -150,6 +159,14 @@ body {
 		.pricing,
 		.footer {
 			padding: 5rem;
+		}
+
+		.pricing {
+			border-bottom-left-radius: 0.5rem;
+		}
+
+		.footer {
+			border-bottom-left-radius: 0;
 		}
 	}
 }

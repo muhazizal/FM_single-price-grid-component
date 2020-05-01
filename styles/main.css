@@ -14,70 +14,75 @@
 body {
   line-height: 1.5;
   font-size: 1.6rem;
+  padding: 5rem;
+  background-color: #e5eff5;
 }
 
-.header {
-  margin: 3rem;
+body .header {
+  padding: 3rem;
+  background: white;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 
-.header__title {
+body .header__title {
   margin: 2rem 0;
   font-size: 2.4rem;
   font-weight: 700;
   color: #2ab2af;
 }
 
-.header__time {
+body .header__time {
   margin-bottom: 1rem;
   font-size: 1.8rem;
   font-weight: 700;
   color: #c0df34;
 }
 
-.header__description {
+body .header__description {
   margin: 0 2rem 3rem 0;
   line-height: 1.8;
   color: #98a6bd;
 }
 
-.pricing {
+body .pricing {
   grid-area: pricing;
   padding: 2rem 3rem;
   background-color: #2ab2af;
 }
 
-.pricing__header {
+body .pricing__header {
   margin-bottom: 1.5rem;
   color: white;
   font-size: 2rem;
   font-weight: 400;
 }
 
-.pricing .cost {
+body .pricing .cost {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
 }
 
-.pricing .cost--money {
+body .pricing .cost--money {
   margin-right: 1rem;
   color: white;
   font-size: 3.2rem;
   font-weight: 700;
 }
 
-.pricing .cost__time {
+body .pricing .cost__time {
   color: #e5eff5;
   font-weight: 400;
   margin: auto 0;
 }
 
-.pricing__access {
+body .pricing__access {
   color: white;
   margin-bottom: 4.5rem;
 }
 
-.pricing__btn {
+body .pricing__btn {
   width: 100%;
   padding: 1.5rem;
   font-family: 'Karla', sans-serif;
@@ -89,33 +94,38 @@ body {
   border-radius: 0.5rem;
 }
 
-.pricing__btn:hover {
+body .pricing__btn:hover {
   cursor: pointer;
   background-color: #acc92c;
 }
 
-.footer {
+body .footer {
   grid-area: footer;
   padding: 3rem;
   background-color: #2dbebc;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
 }
 
-.footer__header {
+body .footer__header {
   color: white;
   font-size: 2rem;
   margin-bottom: 2rem;
 }
 
-.footer__list {
+body .footer__list {
   color: #e5eff5;
+}
+
+@media (min-width: 768px) and (min-width: 1024px) {
+  body {
+    padding: 15rem 25rem;
+  }
 }
 
 @media (min-width: 768px) {
   .header {
-    margin: 10rem 5rem;
-  }
-  .header__description {
-    width: 50%;
+    padding: 5rem;
   }
   main {
     display: -ms-grid;
@@ -129,6 +139,12 @@ body {
   main .pricing,
   main .footer {
     padding: 5rem;
+  }
+  main .pricing {
+    border-bottom-left-radius: 0.5rem;
+  }
+  main .footer {
+    border-bottom-left-radius: 0;
   }
 }
 /*# sourceMappingURL=main.css.map */
