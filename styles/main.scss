@@ -134,7 +134,11 @@ body {
 
 @include media('>=tablet') {
 	.header {
-		margin: 5rem;
+		margin: 10rem 5rem;
+
+		&__description {
+			width: 50%;
+		}
 	}
 
 	main {

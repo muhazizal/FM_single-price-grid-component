@@ -112,7 +112,10 @@ body {
 
 @media (min-width: 768px) {
   .header {
-    margin: 5rem;
+    margin: 10rem 5rem;
+  }
+  .header__description {
+    width: 50%;
   }
   main {
     display: -ms-grid;
