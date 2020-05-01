@@ -6,6 +6,7 @@ $primary-colors: (
 	'cyan': hsl(179, 62%, 43%),
 	'light-cyan': hsl(179, 62%, 46%),
 	'bright-yellow': hsl(71, 73%, 54%),
+	'btn-hover': hsl(71, 64%, 48%),
 );
 
 $neutral-colors: (
@@ -107,6 +108,11 @@ body {
 		background-color: primary-colors('bright-yellow');
 		border: 0;
 		border-radius: 0.5rem;
+
+		&:hover {
+			cursor: pointer;
+			background-color: primary-colors('btn-hover');
+		}
 	}
 }
 

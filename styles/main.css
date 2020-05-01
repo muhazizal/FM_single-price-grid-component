@@ -89,6 +89,11 @@ body {
   border-radius: 0.5rem;
 }
 
+.pricing__btn:hover {
+  cursor: pointer;
+  background-color: #acc92c;
+}
+
 .footer {
   grid-area: footer;
   padding: 3rem;
